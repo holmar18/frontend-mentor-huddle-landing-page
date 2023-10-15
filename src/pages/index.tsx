@@ -1,118 +1,170 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Image from "next/image";
+import {Inter} from "next/font/google";
+import BackDrop from "@/components/BackDrop";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className='flex flex-col items-center lg:pt-36 md:pt-28'>
+      <div className='flex flex-col items-center text-center mx-36 md:mx-12 sm:pt-20 sm:mx-12'>
+        <div className='animate-fade'>
+          <h1 className='lg:text-4xl animate-scaleRotate md:text-3xl sm:text-xl'>
+            Build The Community Your Fans Will Love
+          </h1>
+        </div>
+        <div className='my-8 text-sm animate-fade lg:w-5/12 md:w-8/12 sm:w-full'>
+          <p>
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+        </div>
+        <div>
+          <button className='w-56 h-12 text-white text-xs bg-pink border-pink border-2 transition-all shadow-md font-semibold animate-fade hover:shadow-none hover:scale-95 hover:border-lightPink hover:bg-lightPink'>
+            Get Started For Free
+          </button>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
+      {/* Screen Mockup */}
+      <div className='relative isolate mx-36 md:mx-12 sm:pt-12 sm:mx-12'>
+        <BackDrop />
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          alt='screen mockup'
+          src={"/assets/screen-mockups.svg"}
+          width={1035}
+          height={739}
+          className='lg:my-24 md:my-16 sm:my-12 animate-fade'
         />
+        <BackDrop />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      {/* Stats display */}
+      <div className='flex flex-row justify-between animate-fade lg:w-6/12 md:w-9/12 md:mx-12 mx-36 sm:flex-col sm:pt-12 sm:mx-12'>
+        <div className='sm:mb-12'>
+          <Image
+            alt='communities icon'
+            src={"/assets/icon-communities.svg"}
+            width={47}
+            height={41}
+          />
+          <h1 className='text-5xl my-2 animate-pulse'>1.4K+</h1>
+          <p className='text-sm text-gray-400 text-center'>
+            Communities Formed
           </p>
-        </a>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div>
+          <Image
+            alt='communities icon'
+            src={"/assets/icon-messages.svg"}
+            width={48}
+            height={40}
+          />
+          <h1 className='text-5xl my-2 animate-pulse'>2.7m+</h1>
+          <p className='text-sm text-gray-400 text-center'>Messages Sent</p>
+        </div>
       </div>
+
+      {/* Grow together section */}
+
+      <div className='w-full pt-20 sm:py-4'>
+        <div className='bg-blueCurveTopDesktop bg-cover h-40 w-full sm:bg-blueCurveTopMobile sm:h-24' />
+        <div className='w-full bg-paleblue'>
+          <MaxWidthWrapper>
+            <div className='flex items-center text-center animate-fade sm:pt-8 sm:mx-12 sm:flex-col'>
+              <div className='text-start lg:px-16 md:px-4 sm:pb-8 lg:w-6/12 md:w-6/12'>
+                <h1 className='lg:text-4xl md:text-3xl sm:text-xl'>
+                  Grow Together
+                </h1>
+                <p className='pt-4 text-sm'>
+                  Generate meaningful discussion with your audience and build an
+                  strong, loyal community. Think of the insightful conversation
+                  you miss out on with a feedback form.
+                </p>
+              </div>
+              <div className='lg:w-6/12 md:w-6/12'>
+                <Image
+                  alt='grow toghether'
+                  src={"assets/illustration-grow-together.svg"}
+                  width={1023.46}
+                  height={837.84}
+                />
+              </div>
+            </div>
+          </MaxWidthWrapper>
+        </div>
+        <div className='bg-blueCurveBotDesktop bg-cover h-40 w-full sm:bg-blueCurveBotMobile sm:h-24' />
+      </div>
+
+      {/* Flowing conversation */}
+      <MaxWidthWrapper>
+        <div className='flex items-center text-center animate-fade sm:py-8 sm:mx-12 sm:flex-col'>
+          <div className='pb-8 lg:w-6/12 md:w-6/12'>
+            <Image
+              src={"assets/illustration-flowing-conversation.svg"}
+              alt='flowing conversation'
+              width={1125.12}
+              height={800.94}
+            />
+          </div>
+          <div className='text-start lg:w-6/12 lg:px-16 md:px-8 md:w-6/12'>
+            <h1 className='lg:text-4xl md:text-3xl sm:text-xl'>
+              Flowing Conversation
+            </h1>
+            <p className='pt-4 text-sm'>
+              You would&apos;n paginate a conversation in real life, so why do
+              it online? Our threads have just-in-time loading for a more
+              natural flow.
+            </p>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+
+      {/* Your Users section */}
+
+      <div className='w-full pt-8 sm:py-4'>
+        <div className='bg-blueCurveTopDesktopSc bg-cover h-40 w-full sm:bg-blueCurveTopMobileSc sm:h-24' />
+        <div className='w-full bg-paleblue'>
+          <MaxWidthWrapper>
+            <div className='flex items-center text-center animate-fade sm:pt-8 sm:mx-12 sm:flex-col'>
+              <div className='text-start lg:px-16 md:px-4 sm:pb-8 lg:w-6/12 md:w-6/12'>
+                <h1 className='lg:text-4xl md:text-3xl sm:text-xl'>
+                  Your Users
+                </h1>
+                <p className='pt-4 text-sm'>
+                  It takes no time at all to integrate Huddle with your
+                  app&apos;s authentication solution. This means, once signed in
+                  to your app, your users can start chatting immediately.
+                </p>
+              </div>
+              <div className='lg:w-6/12 md:w-6/12'>
+                <Image
+                  alt='grow toghether'
+                  src={"assets/illustration-your-users.svg"}
+                  width={1023.46}
+                  height={837.84}
+                />
+              </div>
+            </div>
+          </MaxWidthWrapper>
+        </div>
+        <div className='bg-blueCurveBotDesktopSc bg-cover h-40 w-full sm:bg-blueCurveBotMobileSc sm:h-24' />
+      </div>
+
+      <MaxWidthWrapper className='flex flex-col items-center text-center animate-fade pb-20 lg:mx-36 md:mx-12 sm:pt-20'>
+        <h1 className='pb-12 animate-scaleRotate lg:text-4xl md:text-3xl sm:text-xl'>
+          Ready To Build Your Community?
+        </h1>
+        <div>
+          <button className='w-56 h-12 text-white text-xs bg-pink border-pink border-2 transition-all shadow-md font-semibold hover:shadow-none hover:scale-95 hover:border-lightPink hover:bg-lightPink'>
+            Get Started For Free
+          </button>
+        </div>
+      </MaxWidthWrapper>
     </main>
-  )
+  );
 }
+
