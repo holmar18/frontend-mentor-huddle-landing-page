@@ -7,8 +7,9 @@ import {
   faInstagram,
   faSquareTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import {ReactNode} from "react";
 
-const Footer = () => {
+const Footer = (): ReactNode => {
   return (
     <div className='w-full pt-8'>
       <div className='bg-footerTopDesktop bg-cover h-44 w-full sm:bg-footerTopMobile sm:h-24' />

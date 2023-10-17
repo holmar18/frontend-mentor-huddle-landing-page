@@ -1,6 +1,7 @@
 import Image from "next/image";
+import {ReactNode} from "react";
 
-const Navigation = () => {
+const Navigation = (): ReactNode => {
   return (
     <nav className='sticky h-28 px-4 flex mx-auto w-full max-w-screen-xl items-center justify-between sm:px-6 md:px-6'>
       <Image

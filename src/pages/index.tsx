@@ -2,10 +2,9 @@ import Image from "next/image";
 import {Inter} from "next/font/google";
 import BackDrop from "@/components/BackDrop";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import {ReactNode} from "react";
 
-const inter = Inter({subsets: ["latin"]});
-
-export default function Home() {
+export default function Home(): ReactNode {
   return (
     <main className='flex flex-col items-center lg:pt-36 md:pt-28'>
       <div className='flex flex-col items-center text-center mx-36 md:mx-12 sm:pt-20 sm:mx-12'>
